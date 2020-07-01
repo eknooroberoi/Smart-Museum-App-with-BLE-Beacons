@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Welcome to Smart Museum!
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-grid no-padding>
+
+  <ion-row>
+    <ion-col>
+      <ion-card>
+            <img src="../../assets/imgs/museum-interior.jpg"/>
+            <ion-card-content>
+              <ion-card-title>
+                What Can You Do Here?
+              </ion-card-title>
+              <p *ngIf="currentLocation == ''" >
+                Not much to do here right now!
+              </p>
+              <button *ngIf="currentLocation == 'Burman Elephant'" ion-button item-end icon-start (click)="onElephant()" >
+                  <ion-icon name="eye"></ion-icon>
+                    View Burman Elephant?
+              </button>
+              <button *ngIf="currentLocation == 'Golden Bear'" ion-button item-end icon-start (click)="onBear()" >
+                <ion-icon name="eye"></ion-icon>
+                  View Golden Bear?
+            </button>
+            </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+      <ion-col>
+          <ion-card (click)="onViewConditions()">
+            <img src="../../assets/imgs/museum.jpg">
+            <ion-card-content>
+                <ion-card-title>
+                  Shop Status
+                </ion-card-title>
+            </ion-card-content>
+          </ion-card>
+      </ion-col>
+      <ion-col>
+        <ion-card (click)="onRequestHelp()">
+          <img src="../../assets/imgs/gallery_guide.jpg">
+          <ion-card-content>
+            <ion-card-title>
+              Request Help Here?
+            </ion-card-title>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+
+</ion-grid>
+</ion-content>
+

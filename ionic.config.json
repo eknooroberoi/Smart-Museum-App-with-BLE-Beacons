@@ -1,0 +1,7 @@
+{
+  "name": "smart-museum",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
